@@ -1,137 +1,133 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="류치환 변호사 — 부동산·건설 분쟁, 채권 회수 및 강제집행, 민사·형사 사건 법률서비스">
-  <meta name="theme-color" content="#10243a">
-  <title>류치환 변호사 | 부동산·건설·채권 회수</title>
-  <style>
-    :root{--navy:#10243a;--navy2:#193650;--gold:#c5a56a;--ink:#202b35;--muted:#667482;--paper:#f7f6f2;--white:#fff;--line:#e4e6e8}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:"Pretendard","Noto Sans KR","Malgun Gothic",Arial,sans-serif;color:var(--ink);line-height:1.7;background:#fff}
-    a{color:inherit;text-decoration:none} .wrap{width:min(1160px,calc(100% - 44px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
-    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-weight:800;letter-spacing:-.04em;color:var(--navy);font-size:19px}.brand small{display:block;font-size:10px;letter-spacing:.17em;color:var(--gold);font-weight:700}
-    nav{display:flex;gap:25px;font-size:13px;font-weight:700;color:#354555} nav a:hover{color:#9a793e}
-    .hero{background:linear-gradient(115deg,rgba(10,29,48,.98),rgba(25,54,80,.94)),radial-gradient(circle at 80% 20%,#3c5367,transparent 40%);color:#fff;position:relative;overflow:hidden}
-    .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(197,165,106,.22);border-radius:50%;right:-100px;top:-120px;box-shadow:0 0 0 45px rgba(197,165,106,.035),0 0 0 90px rgba(197,165,106,.025)}
-    .hero-inner{min-height:550px;display:flex;align-items:center;padding:86px 0;position:relative;z-index:1}
-    .eyebrow{font-size:12px;letter-spacing:.2em;color:#d9bd87;font-weight:800;margin-bottom:22px}
-    h1{font-size:clamp(36px,5vw,62px);line-height:1.25;letter-spacing:-.055em;margin:0 0 24px;font-weight:800}
-    h1 em{font-style:normal;color:#d9bd87}.hero p{font-size:17px;color:#e0e7ed;max-width:620px;margin:0 0 32px}
-    .buttons{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid rgba(255,255,255,.5);font-size:13px;font-weight:800;min-height:48px}.btn.primary{background:var(--gold);border-color:var(--gold);color:#152638}.btn:hover{transform:translateY(-1px)}
-    .hero-note{font-size:12px!important;color:#b8c5d0!important;margin-top:24px!important}
-    section{padding:88px 0}.section-head{max-width:720px;margin-bottom:38px}.kicker{font-size:11px;font-weight:800;letter-spacing:.18em;color:#a17e42;text-transform:uppercase}.section-head h2{font-size:clamp(28px,3vw,40px);line-height:1.35;letter-spacing:-.045em;color:var(--navy);margin:10px 0 14px}.section-head p{margin:0;color:var(--muted)}
-    .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px;border:1px solid var(--line);background:#fff;min-height:235px;transition:.2s}.card:hover{border-color:#c5a56a;transform:translateY(-3px);box-shadow:0 12px 30px rgba(16,36,58,.07)}
-    .num{font-size:12px;color:#a17e42;font-weight:800;letter-spacing:.12em}.card h3{font-size:21px;color:var(--navy);margin:14px 0 10px;letter-spacing:-.035em}.card p{font-size:14px;color:var(--muted);margin:0 0 16px}.tags{font-size:11px;color:#5f6e7a;line-height:2}
-    .band{background:var(--paper)}.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
-    .statement{background:var(--navy);color:#fff;padding:38px;position:relative}.statement:before{content:"“";font-family:Georgia,serif;font-size:72px;color:var(--gold);line-height:.8;display:block}.statement p{font-size:23px;line-height:1.55;letter-spacing:-.04em;margin:14px 0 20px}.statement small{color:#c6d0d9}
-    .bio h2{font-size:34px;line-height:1.35;letter-spacing:-.045em;color:var(--navy);margin:10px 0 18px}.bio p{color:var(--muted)}.credentials{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}.credential{border-top:1px solid #d7d9d9;padding:13px 0;font-size:13px}.credential b{display:block;color:var(--navy);font-size:14px;margin-bottom:3px}
-    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}.step{border-top:2px solid var(--gold);padding:20px 18px;background:#fff}.step:before{counter-increment:step;content:"0" counter(step);font-size:12px;color:#a17e42;font-weight:800;letter-spacing:.12em}.step h3{font-size:17px;color:var(--navy);margin:12px 0 8px}.step p{font-size:13px;color:var(--muted);margin:0}
-    .insights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.insight{padding:24px;border:1px solid var(--line)}.insight span{font-size:11px;color:#a17e42;font-weight:800}.insight h3{font-size:18px;color:var(--navy);line-height:1.5;margin:10px 0}.insight p{font-size:13px;color:var(--muted);margin:0}
-    .contact{background:var(--navy);color:#fff}.contact .section-head h2{color:#fff}.contact .section-head p{color:#cbd5de}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-list{border-top:1px solid rgba(255,255,255,.25)}.contact-row{padding:17px 0;border-bottom:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:110px 1fr;gap:12px;font-size:14px}.contact-row strong{color:#d9bd87}.contact-box{background:#fff;color:var(--ink);padding:28px}.contact-box h3{margin:0 0 10px;color:var(--navy);font-size:21px}.contact-box p{font-size:13px;color:var(--muted)}.contact-box .btn{background:var(--gold);border-color:var(--gold);color:var(--navy);width:100%;margin-top:8px}
-    footer{background:#0a1928;color:#aebbc7;padding:25px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.notice{font-size:11px;color:#9ba8b2;margin-top:20px;line-height:1.7}
-    @media(max-width:800px){nav{gap:12px;font-size:11px}.nav{height:auto;min-height:72px}.areas,.insights{grid-template-columns:1fr}.split,.contact-grid{grid-template-columns:1fr;gap:28px}.process{grid-template-columns:1fr 1fr}.hero-inner{min-height:500px;padding:70px 0}section{padding:65px 0}}
-    @media(max-width:520px){.wrap{width:min(100% - 30px,1160px)}nav{display:none}.hero p{font-size:15px}.credentials,.process{grid-template-columns:1fr}.contact-row{grid-template-columns:88px 1fr}.statement{padding:28px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="법무법인 그린 류치환 변호사. 부동산·건설 분쟁, 채권 회수와 강제집행, 민사·형사 및 기업 법률자문.">
+<meta name="theme-color" content="#10243a">
+<title>류치환 변호사 | 부동산·건설·채권 회수</title>
+<style>
+:root{--navy:#10243a;--navy2:#193650;--gold:#c5a56a;--ink:#202b35;--muted:#667482;--paper:#f7f6f2;--white:#fff;--line:#e4e6e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font-family:"Pretendard","Noto Sans KR","Malgun Gothic",Arial,sans-serif;color:var(--ink);line-height:1.75;background:#fff}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;letter-spacing:-.04em;color:var(--navy);font-size:19px;white-space:nowrap}.brand small{display:block;font-size:10px;letter-spacing:.17em;color:var(--gold);font-weight:800}
+nav{display:flex;gap:20px;font-size:12px;font-weight:800;color:#354555;flex-wrap:wrap;justify-content:flex-end}nav a:hover{color:#9a793e}
+.hero{background:linear-gradient(115deg,rgba(10,29,48,.98),rgba(25,54,80,.94)),radial-gradient(circle at 80% 20%,#3c5367,transparent 40%);color:#fff;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(197,165,106,.22);border-radius:50%;right:-100px;top:-120px;box-shadow:0 0 0 45px rgba(197,165,106,.035),0 0 0 90px rgba(197,165,106,.025)}.hero-inner{min-height:570px;display:flex;align-items:center;padding:85px 0;position:relative;z-index:1}.eyebrow,.kicker{font-size:11px;letter-spacing:.19em;color:#bd9656;font-weight:900;text-transform:uppercase}.hero h1{font-size:clamp(36px,5vw,62px);line-height:1.25;letter-spacing:-.055em;margin:18px 0 24px;font-weight:850}.hero h1 em{font-style:normal;color:#d9bd87}.hero p{font-size:17px;color:#e0e7ed;max-width:670px;margin:0 0 30px}.buttons{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border:1px solid rgba(255,255,255,.55);font-size:13px;font-weight:850;min-height:47px;transition:.2s}.btn.primary{background:var(--gold);border-color:var(--gold);color:#152638}.btn:hover{transform:translateY(-2px)}.hero-note{font-size:12px!important;color:#b8c5d0!important;margin-top:23px!important}
+section{padding:82px 0}.section-head{max-width:760px;margin-bottom:35px}.section-head h2{font-size:clamp(28px,3vw,39px);line-height:1.35;letter-spacing:-.045em;color:var(--navy);margin:9px 0 13px}.section-head p{margin:0;color:var(--muted)}.band{background:var(--paper)}
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:25px;border:1px solid var(--line);background:#fff;min-height:220px;transition:.2s}.card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 30px rgba(16,36,58,.07)}.num{font-size:11px;color:#a17e42;font-weight:900;letter-spacing:.12em}.card h3{font-size:20px;color:var(--navy);margin:12px 0 9px;letter-spacing:-.035em}.card p{font-size:13px;color:var(--muted);margin:0 0 12px}.tags{font-size:11px;color:#536575;line-height:2}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:58px;align-items:start}.statement{background:var(--navy);color:#fff;padding:35px}.statement:before{content:"“";font-family:Georgia,serif;font-size:68px;color:var(--gold);line-height:.8;display:block}.statement p{font-size:22px;line-height:1.55;letter-spacing:-.04em;margin:12px 0 18px}.statement small{color:#c6d0d9}.bio h2{font-size:34px;line-height:1.35;letter-spacing:-.045em;color:var(--navy);margin:8px 0 15px}.bio p{color:var(--muted);margin-top:0}.credentials{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin-top:22px}.credential{border-top:1px solid #d7d9d9;padding:12px 0;font-size:12px;color:var(--muted)}.credential b{display:block;color:var(--navy);font-size:13px;margin-bottom:2px}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.case{background:#fff;border:1px solid var(--line);padding:23px}.case span{font-size:10px;letter-spacing:.12em;color:#a17e42;font-weight:900}.case h3{font-size:17px;line-height:1.5;color:var(--navy);margin:9px 0}.case p{font-size:13px;color:var(--muted);margin:0}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}.step{border-top:2px solid var(--gold);padding:19px 17px;background:#fff}.step:before{counter-increment:step;content:"0" counter(step);font-size:12px;color:#a17e42;font-weight:900;letter-spacing:.12em}.step h3{font-size:16px;color:var(--navy);margin:10px 0 7px}.step p{font-size:12px;color:var(--muted);margin:0}
+.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.insight{padding:23px;border:1px solid var(--line);background:#fff}.insight span{font-size:10px;color:#a17e42;font-weight:900}.insight h3{font-size:17px;color:var(--navy);line-height:1.5;margin:9px 0}.insight p{font-size:12px;color:var(--muted);margin:0}
+.contact{background:var(--navy);color:#fff}.contact .section-head h2{color:#fff}.contact .section-head p{color:#cbd5de}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px}.contact-list{border-top:1px solid rgba(255,255,255,.25)}.contact-row{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:105px 1fr;gap:12px;font-size:13px}.contact-row strong{color:#d9bd87}.contact-row a.text-link{text-decoration:underline;text-underline-offset:3px}.contact-box{background:#fff;color:var(--ink);padding:27px}.contact-box h3{margin:0 0 10px;color:var(--navy);font-size:20px}.contact-box p{font-size:12px;color:var(--muted)}.contact-box .btn{background:var(--gold);border-color:var(--gold);color:var(--navy);width:100%;margin-top:8px}.map-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.map-links a{border:1px solid #d9dee2;padding:9px 12px;font-size:12px;font-weight:800;color:var(--navy)}.map-links a:hover{border-color:var(--gold);background:#fbf8f1}
+footer{background:#0a1928;color:#aebbc7;padding:24px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.notice{font-size:11px;color:#9ba8b2;margin-top:18px;line-height:1.7}.small-note{font-size:11px;color:#7b8791;margin-top:20px}
+@media(max-width:900px){.nav{align-items:flex-start;padding:14px 0;flex-direction:column;gap:10px}nav{justify-content:flex-start;gap:8px 15px}.areas,.case-grid,.insights{grid-template-columns:repeat(2,1fr)}.split,.contact-grid{grid-template-columns:1fr;gap:25px}.process{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}nav{font-size:11px;gap:7px 12px}.hero-inner{min-height:520px;padding:65px 0}.hero p{font-size:15px}section{padding:60px 0}.areas,.case-grid,.insights,.credentials,.process{grid-template-columns:1fr}.contact-row{grid-template-columns:85px 1fr}.statement{padding:27px}}
+</style>
 </head>
 <body>
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home"><small>ATTORNEY AT LAW</small>류치환 변호사</a>
-    <nav aria-label="주 메뉴">
-      <a href="#practice">업무 분야</a><a href="#about">변호사 소개</a><a href="#approach">업무 원칙</a><a href="#insights">법률정보</a><a href="https://blog.naver.com/yoolhyung" target="_blank" rel="noopener noreferrer">네이버 블로그</a><a href="#contact">상담 안내</a>
-    </nav>
-  </div>
+ <div class="wrap nav">
+  <a class="brand" href="#home"><small>ATTORNEY AT LAW · LAW FIRM GREEN</small>류치환 변호사</a>
+  <nav aria-label="주 메뉴">
+   <a href="#practice">업무 분야</a><a href="#about">변호사 소개</a><a href="#cases">주요 업무 유형</a><a href="#approach">업무 원칙</a><a href="#insights">법률정보</a><a href="#contact">상담·위치</a>
+  </nav>
+ </div>
 </header>
 <main>
-  <section class="hero" id="home">
-    <div class="wrap hero-inner">
-      <div>
-        <div class="eyebrow">REAL ESTATE · CONSTRUCTION · CLAIMS</div>
-        <h1>복잡한 분쟁일수록<br><em>핵심을 짚는 전략</em>이 필요합니다.</h1>
-        <p>부동산·건설 분쟁부터 채권 회수와 강제집행까지. 사실관계와 증거를 면밀히 검토하고, 의뢰인의 상황에 맞는 현실적인 법률 대응을 모색합니다.</p>
-        <div class="buttons"><a class="btn primary" href="#practice">주요 업무 분야 보기</a><a class="btn" href="#contact">상담 안내</a></div>
-        <p class="hero-note">법무법인 그린 · 류치환 변호사</p>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="home"><div class="wrap hero-inner"><div>
+ <div class="eyebrow">REAL ESTATE · CONSTRUCTION · DEBT RECOVERY</div>
+ <h1>부동산·건설·채권 회수<br><em>분쟁의 핵심부터 실행까지</em></h1>
+ <p>복잡한 법률문제일수록 사실관계와 증거를 정확히 살피는 일이 중요합니다. 부동산·건설 분쟁, 채권 회수와 강제집행을 중심으로 의뢰인의 상황에 맞는 현실적인 대응 방안을 검토합니다.</p>
+ <div class="buttons"><a class="btn primary" href="#practice">주요 업무 분야</a><a class="btn" href="tel:0234732385">전화 상담 02-3473-2385</a></div>
+ <p class="hero-note">법무법인 그린 · 류치환 변호사</p>
+</div></div></section>
 
-  <section id="practice">
-    <div class="wrap">
-      <div class="section-head"><div class="kicker">Practice Areas</div><h2>주요 업무 분야</h2><p>분쟁의 성격과 목표를 정확히 파악하고, 소송 전 협의부터 재판과 집행까지 필요한 대응을 검토합니다.</p></div>
-      <div class="areas">
-        <article class="card"><div class="num">01 / REAL ESTATE</div><h3>부동산 분쟁</h3><p>소유권·점유·임대차 등 부동산을 둘러싼 권리관계를 검토하고 해결 방안을 모색합니다.</p><div class="tags">토지인도 · 건물명도 · 임대차 · 소유권 분쟁 · 지역주택조합</div></article>
-        <article class="card"><div class="num">02 / CONSTRUCTION</div><h3>건설·공사 분쟁</h3><p>공사대금, 계약 이행, 하자 및 손해배상 등 건설 현장에서 발생하는 법률 문제에 대응합니다.</p><div class="tags">공사대금 · 계약해제 · 하자·손해배상 · 벌점 관련 분쟁</div></article>
-        <article class="card"><div class="num">03 / DEBT RECOVERY</div><h3>채권 회수·강제집행</h3><p>채권의 발생과 증거를 검토하고, 지급명령·보전처분·판결 후 집행 등 회수 절차를 설계합니다.</p><div class="tags">내용증명 · 지급명령 · 가압류 · 채권압류 · 추심·강제집행</div></article>
-        <article class="card"><div class="num">04 / CIVIL LITIGATION</div><h3>민사소송</h3><p>계약과 거래에서 발생한 분쟁의 쟁점을 정리하고 증거에 기초해 청구와 방어 전략을 수립합니다.</p><div class="tags">대여금 · 물품대금 · 계약 분쟁 · 손해배상</div></article>
-        <article class="card"><div class="num">05 / CRIMINAL DEFENSE</div><h3>형사사건</h3><p>사건 초기부터 사실관계와 자료를 검토하고, 수사 및 재판 절차에 필요한 대응을 준비합니다.</p><div class="tags">수사 대응 · 피해자 대리 · 형사재판 · 합의 관련 자문</div></article>
-        <article class="card"><div class="num">06 / LEGAL ADVISORY</div><h3>계약 검토·법률 자문</h3><p>계약 체결 전후의 위험 요소를 확인하고, 분쟁 예방과 대응을 위한 실무적 의견을 제공합니다.</p><div class="tags">계약서 검토 · 내용증명 · 분쟁 예방 · 기업 법률 자문</div></article>
-      </div>
-    </div>
-  </section>
+<section id="practice"><div class="wrap">
+ <div class="section-head"><div class="kicker">Practice Areas</div><h2>주요 업무 분야</h2><p>사건의 성격과 목표를 파악하고, 소송 전 협의부터 재판·집행까지 필요한 절차와 대응 방향을 검토합니다.</p></div>
+ <div class="areas">
+  <article class="card"><div class="num">01 / REAL ESTATE</div><h3>부동산 분쟁</h3><p>부동산의 소유·점유·사용 관계와 계약 내용을 검토하여 분쟁 해결 방안을 모색합니다.</p><div class="tags">토지인도 · 건물명도 · 임대차 · 소유권 · 지역주택조합 · 분양계약 해제</div></article>
+  <article class="card"><div class="num">02 / CONSTRUCTION</div><h3>건설·공사 분쟁</h3><p>공사계약의 이행과 정산, 공사대금 및 하자·손해배상 관련 쟁점을 검토합니다.</p><div class="tags">공사대금 · 하도급대금 · 계약해지 · 기성고 · 하자 · 벌점 관련 분쟁</div></article>
+  <article class="card"><div class="num">03 / DEBT RECOVERY</div><h3>채권 회수·강제집행</h3><p>채권의 발생과 증거, 채무자 재산 및 집행 가능성을 살펴 회수 절차를 설계합니다.</p><div class="tags">내용증명 · 지급명령 · 가압류 · 채권압류·추심 · 강제집행</div></article>
+  <article class="card"><div class="num">04 / CIVIL LITIGATION</div><h3>민사소송·손해배상</h3><p>계약과 거래에서 발생한 분쟁의 쟁점을 정리하고 자료에 기초해 청구·방어 전략을 수립합니다.</p><div class="tags">대여금 · 물품대금 · 계약분쟁 · 교통사고 · 산업재해 손해배상</div></article>
+  <article class="card"><div class="num">05 / CRIMINAL</div><h3>형사사건</h3><p>사건 초기부터 사실관계와 자료를 검토하고 수사·재판 및 피해자 대응에 필요한 절차를 준비합니다.</p><div class="tags">재산범죄 · 교통사고 · 피해자 대리 · 수사 대응 · 형사재판</div></article>
+  <article class="card"><div class="num">06 / ADVISORY</div><h3>계약 검토·법률 자문</h3><p>계약 체결 전후의 위험 요소를 확인하고 분쟁 예방과 대응을 위한 실무적 의견을 제공합니다.</p><div class="tags">계약서 검토 · 내용증명 · 기업 법률자문 · 분쟁 예방</div></article>
+ </div>
+</div></section>
 
-  <section class="band" id="about">
-    <div class="wrap split">
-      <div class="statement"><p>법률 문제를 정확히 이해하고, 가능한 선택지와 위험을 투명하게 설명하는 것에서 해결이 시작됩니다.</p><small>류치환 변호사의 업무 원칙</small></div>
-      <div class="bio"><div class="kicker">Attorney Profile</div><h2>류치환 변호사</h2><p>부동산·건설 및 채권 회수 분야를 중심으로 민사·형사 사건과 법률 자문을 수행합니다. 사건의 핵심 쟁점과 증거를 정리하고, 의뢰인이 선택할 수 있는 대응 방안과 예상되는 위험을 이해하기 쉽게 설명하는 것을 중요하게 생각합니다.</p>
-        <div class="credentials">
-          <div class="credential"><b>금융파산전문가</b><span>관련 전문 자격</span></div>
-          <div class="credential"><b>대한변협 형사전문변호사</b><span>전문 분야 등록</span></div>
-          <div class="credential"><b>신용보증기금 소송위임변호사</b><span>위촉 경력</span></div>
-          <div class="credential"><b>부동산·공공 분야 활동</b><span>위원회 등 관련 경력</span></div>
-        </div>
-        <p class="notice">※ 공개 전 법무법인 공식 명칭, 경력·자격의 정확한 표기와 현재 유효 여부를 확인해 주세요. 위촉·위원 경력은 실제 활동 내역에 맞게 구체적으로 수정해야 합니다.</p>
-      </div>
-    </div>
-  </section>
+<section class="band" id="about"><div class="wrap split">
+ <div class="statement"><p>사건의 핵심을 정확히 파악하고, 가능한 선택지와 위험을 투명하게 설명하는 것에서 해결이 시작됩니다.</p><small>류치환 변호사의 업무 원칙</small></div>
+ <div class="bio"><div class="kicker">Attorney Profile</div><h2>류치환 변호사</h2>
+  <p>부동산·건설 및 채권 회수 분야를 중심으로 민사·형사 사건과 법률 자문을 수행합니다. 사실관계와 증거를 면밀히 검토하고, 의뢰인이 선택할 수 있는 대응 방안과 예상되는 위험을 이해하기 쉽게 설명하는 것을 중요하게 생각합니다.</p>
+  <div class="credentials">
+   <div class="credential"><b>금융파산전문가</b>전문 자격·활동</div>
+   <div class="credential"><b>대한변협 형사전문변호사</b>전문 분야 등록</div>
+   <div class="credential"><b>신용보증기금 소송위임변호사</b>위촉 경력</div>
+   <div class="credential"><b>서울교통공사 사업개발 자문위원</b>자문위원 활동</div>
+   <div class="credential"><b>서울도시기반시설본부 벌점심의위원회 심의위원</b>위원회 활동</div>
+   <div class="credential"><b>국방부 중앙전공사상심사위원회 위원</b>위원회 활동</div>
+   <div class="credential"><b>공인중개사</b>관련 자격</div>
+  </div>
+  <p class="small-note">※ 자격·위촉 명칭, 활동 기간 및 현재 유효 여부는 공개 전 최종 확인해 주세요. 실제 경력과 다른 표현은 수정하거나 삭제해야 합니다.</p>
+ </div>
+</div></section>
 
-  <section id="approach">
-    <div class="wrap">
-      <div class="section-head"><div class="kicker">How We Work</div><h2>사건의 처음부터 다음 단계까지</h2><p>사건에 따라 절차와 소요 기간은 달라질 수 있습니다. 초기 검토에서부터 실행 가능한 대응 방안을 함께 살펴봅니다.</p></div>
-      <div class="process">
-        <div class="step"><h3>상황 파악</h3><p>사실관계, 당사자 관계, 원하는 결과와 시급한 쟁점을 확인합니다.</p></div>
-        <div class="step"><h3>자료·증거 검토</h3><p>계약서, 거래 내역, 통지서와 관련 자료를 검토해 핵심 쟁점을 정리합니다.</p></div>
-        <div class="step"><h3>대응 전략 수립</h3><p>협의, 내용증명, 보전처분, 소송 등 가능한 선택지와 위험을 비교합니다.</p></div>
-        <div class="step"><h3>절차 진행</h3><p>위임 범위와 사건 특성에 따라 필요한 절차를 진행하고 후속 조치를 검토합니다.</p></div>
-      </div>
-    </div>
-  </section>
+<section id="cases"><div class="wrap">
+ <div class="section-head"><div class="kicker">Representative Matters</div><h2>주요 업무 유형</h2><p>다음은 업무 분야를 이해하기 위한 대표적인 사건 유형입니다. 실제 사건의 구체적인 사실관계와 결과를 공개하는 사례가 아니며, 개별 사건의 결과는 증거와 사정에 따라 달라집니다.</p></div>
+ <div class="case-grid">
+  <article class="case"><span>REAL ESTATE</span><h3>토지인도·건물명도 및 점유 분쟁</h3><p>소유권과 점유 관계, 청구 범위, 판결 후 인도·철거 집행 가능성 등을 검토하는 업무 유형</p></article>
+  <article class="case"><span>CONSTRUCTION</span><h3>공사대금·기성고·계약 정산 분쟁</h3><p>공사 범위와 변경 내역, 기성고, 정산 자료 및 계약상 책임을 검토하는 업무 유형</p></article>
+  <article class="case"><span>DEBT RECOVERY</span><h3>채권 보전부터 판결 후 회수까지</h3><p>지급명령·가압류 등 보전 절차와 집행권원 확보, 예금·채권 압류 및 추심을 검토하는 업무 유형</p></article>
+  <article class="case"><span>HOUSING</span><h3>지역주택조합·분양계약 관련 분쟁</h3><p>가입·분양 계약, 납입금, 탈퇴·해제 사유와 반환 청구 가능성을 검토하는 업무 유형</p></article>
+  <article class="case"><span>DAMAGES</span><h3>교통사고·산업재해 손해배상</h3><p>사고 경위와 책임, 손해 항목, 보험 및 손해배상 청구 구조를 검토하는 업무 유형</p></article>
+  <article class="case"><span>CRIMINAL</span><h3>형사절차 및 피해자 대응</h3><p>초기 진술과 증거, 수사 진행 상황, 피해 회복 및 형사절차상 대응을 검토하는 업무 유형</p></article>
+ </div>
+</div></section>
 
-  <section class="band" id="insights">
-    <div class="wrap">
-      <div class="section-head"><div class="kicker">Legal Insights</div><h2>법률정보와 실무 해설</h2><p>판비넷 네이버 블로그에서 판례 해설과 법률정보를 확인하실 수 있습니다. 법률정보는 일반적인 이해를 돕기 위한 자료이며, 구체적인 사건은 사실관계와 증거에 따라 결론이 달라질 수 있습니다.</p><p style="margin-top:18px"><a class="btn" style="border-color:#10243a;color:#10243a" href="https://blog.naver.com/yoolhyung" target="_blank" rel="noopener noreferrer">판비넷 블로그 방문하기 ↗</a></p></div>
-      <div class="insights">
-        <article class="insight"><span>DEBT RECOVERY</span><h3>강제집행, 제대로 알아야 돈을 받는다</h3><p>집행권원 확보부터 재산 파악과 압류·추심까지, 채권 회수 절차에서 살펴볼 핵심 사항.</p></article>
-        <article class="insight"><span>REAL ESTATE</span><h3>토지인도·건물명도 분쟁에서 확인할 사항</h3><p>소유권과 점유 관계, 청구 범위, 판결 이후 집행 단계에서 확인할 실무 쟁점.</p></article>
-        <article class="insight"><span>CONSTRUCTION</span><h3>공사대금 분쟁, 계약서와 증거가 중요합니다</h3><p>공사 범위와 변경 내역, 기성고, 정산 자료 등 분쟁 전 점검할 자료.</p></article>
-      </div>
-      <p class="notice">※ 위 항목은 홈페이지 구성 예시입니다. 실제 게시 전에는 관련 판례·법령과 사실관계를 확인한 법률 칼럼으로 교체하고, 운영 중인 블로그 링크를 연결하세요.</p>
-    </div>
-  </section>
+<section class="band" id="approach"><div class="wrap">
+ <div class="section-head"><div class="kicker">How We Work</div><h2>상담부터 후속 절차까지</h2><p>사건에 따라 절차와 소요 기간은 달라집니다. 위임 범위와 사건 특성을 확인한 뒤 단계별 대응을 진행합니다.</p></div>
+ <div class="process">
+  <div class="step"><h3>상황 파악</h3><p>사실관계, 당사자 관계, 원하는 결과와 시급한 쟁점을 확인합니다.</p></div>
+  <div class="step"><h3>자료·증거 검토</h3><p>계약서, 거래 내역, 통지서 및 관련 자료를 검토해 핵심 쟁점을 정리합니다.</p></div>
+  <div class="step"><h3>대응 전략 수립</h3><p>협의, 내용증명, 보전처분, 소송 등 가능한 선택지와 위험을 비교합니다.</p></div>
+  <div class="step"><h3>절차 진행·후속 검토</h3><p>위임 범위에 따라 절차를 진행하고 판결 이후 집행 등 후속 조치를 검토합니다.</p></div>
+ </div>
+</div></section>
 
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="section-head"><div class="kicker">Contact</div><h2>상담 안내</h2><p>상담 전 사건의 개요와 주요 자료를 정리해 두시면 검토에 도움이 됩니다. 구체적인 수임 여부와 보수는 상담 후 협의합니다.</p></div>
-      <div class="contact-grid">
-        <div class="contact-list">
-          <div class="contact-row"><strong>담당 변호사</strong><span>류치환 변호사</span></div>
-          <div class="contact-row"><strong>소속</strong><span>법무법인 그린</span></div>
-          <div class="contact-row"><strong>전화</strong><span><a href="tel:0234732385">02-3473-2385</a></span></div>
-          <div class="contact-row"><strong>팩스</strong><span>02-3473-2387</span></div>
-          <div class="contact-row"><strong>주소</strong><span>서울특별시 서초구 서초대로 250, 201호</span></div>
-          <div class="contact-row"><strong>운영시간</strong><span>[상담 가능 시간 입력]</span></div>
-        </div>
-        <div class="contact-box"><h3>상담 전 준비하면 좋은 자료</h3><p>계약서·내용증명·판결문·거래 내역 등 사건 관련 자료와 사건의 주요 날짜를 준비해 주세요. 개인정보와 제3자의 민감정보는 안전한 전달 방법을 확인한 뒤 제공해 주세요.</p><p>전화 상담은 아래 번호로 문의해 주세요. 상담 전 주요 자료와 사건 경위를 정리해 두시면 도움이 됩니다.</p><a class="btn" href="tel:0234732385">전화 상담하기 · 02-3473-2385</a></div>
-      </div>
-    </div>
-  </section>
+<section id="insights"><div class="wrap">
+ <div class="section-head"><div class="kicker">Legal Insights</div><h2>법률정보와 실무 해설</h2><p>판비넷 네이버 블로그에서 판례 해설과 법률정보를 확인하실 수 있습니다. 구체적인 사건은 사실관계와 증거에 따라 법률적 판단이 달라질 수 있습니다.</p>
+ <p style="margin-top:18px"><a class="btn" style="border-color:#10243a;color:#10243a" href="https://blog.naver.com/yoolhyung" target="_blank" rel="noopener noreferrer">판비넷 블로그 방문하기 ↗</a></p></div>
+ <div class="insights">
+  <article class="insight"><span>DEBT RECOVERY</span><h3>강제집행, 제대로 알아야 돈을 받는다</h3><p>집행권원 확보부터 재산 파악과 압류·추심까지 채권 회수 절차의 핵심 사항</p></article>
+  <article class="insight"><span>REAL ESTATE</span><h3>토지인도·건물명도 분쟁에서 확인할 사항</h3><p>소유권과 점유 관계, 청구 범위, 판결 이후 집행 단계의 주요 쟁점</p></article>
+  <article class="insight"><span>CONSTRUCTION</span><h3>공사대금 분쟁, 계약서와 증거가 중요합니다</h3><p>공사 범위와 변경 내역, 기성고, 정산 자료 등 분쟁 전 점검할 자료</p></article>
+ </div>
+ <p class="small-note">※ 위 항목은 블로그에서 관련 글을 찾아볼 수 있도록 안내하는 주제입니다. 개별 글의 제목과 게시 여부는 블로그에서 확인해 주세요.</p>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+ <div class="section-head"><div class="kicker">Contact & Location</div><h2>상담 안내 및 오시는 길</h2><p>상담 전 사건의 개요와 주요 자료, 사건의 주요 날짜를 정리해 두시면 검토에 도움이 됩니다. 방문 상담은 사전에 전화로 일정을 확인해 주세요.</p></div>
+ <div class="contact-grid">
+  <div class="contact-list">
+   <div class="contact-row"><strong>담당 변호사</strong><span>류치환 변호사</span></div>
+   <div class="contact-row"><strong>소속</strong><span>법무법인 그린</span></div>
+   <div class="contact-row"><strong>전화</strong><span><a href="tel:0234732385">02-3473-2385</a></span></div>
+   <div class="contact-row"><strong>팩스</strong><span>02-3473-2387</span></div>
+   <div class="contact-row"><strong>주소</strong><span>서울특별시 서초구 서초대로 250, 201호</span></div>
+   <div class="contact-row"><strong>방문 안내</strong><span>방문 전 전화로 상담 일정 확인</span></div>
+  </div>
+  <div class="contact-box"><h3>상담 전 준비하면 좋은 자료</h3>
+   <p>계약서·내용증명·판결문·거래 내역 등 사건 관련 자료와 주요 날짜를 준비해 주세요. 개인정보와 제3자의 민감정보는 안전한 전달 방법을 확인한 뒤 제공해 주세요.</p>
+   <a class="btn" href="tel:0234732385">전화 상담하기 · 02-3473-2385</a>
+   <div class="map-links">
+    <a href="https://map.naver.com/p/search/서울특별시%20서초구%20서초대로%20250" target="_blank" rel="noopener noreferrer">네이버 지도에서 위치 보기 ↗</a>
+    <a href="https://map.kakao.com/?q=서울특별시%20서초구%20서초대로%20250" target="_blank" rel="noopener noreferrer">카카오맵에서 위치 보기 ↗</a>
+   </div>
+  </div>
+ </div>
+</div></section>
 </main>
-<footer>
-  <div class="wrap footer-inner"><span>© <span id="year"></span> 류치환 변호사. All rights reserved.</span><span>법무법인 그린 · 부동산 · 건설 · 채권 회수</span></div>
-  <div class="wrap notice">본 홈페이지의 내용은 일반적인 법률정보 제공을 위한 것으로, 개별 사건에 대한 법률의견이나 결과를 보장하지 않습니다. 실제 상담 및 위임은 별도의 확인과 절차를 거쳐 진행됩니다.</div>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> 류치환 변호사. All rights reserved.</span><span>법무법인 그린 · 부동산 · 건설 · 채권 회수</span></div>
+ <div class="wrap notice">본 홈페이지의 내용은 일반적인 법률정보 제공을 위한 것으로, 개별 사건에 대한 법률의견이나 결과를 보장하지 않습니다. 실제 상담 및 위임은 별도의 확인과 절차를 거쳐 진행됩니다. 홈페이지에 기재된 경력·자격·위촉 사항은 공개 전 사실관계와 표기 적정성을 확인해야 합니다.</div>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
