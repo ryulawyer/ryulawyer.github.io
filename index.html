@@ -22,6 +22,14 @@ section{padding:82px 0}.section-head{max-width:760px;margin-bottom:35px}.section
 footer{background:#0a1928;color:#aebbc7;padding:24px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.notice{font-size:11px;color:#9ba8b2;margin-top:18px;line-height:1.7}.small-note{font-size:11px;color:#7b8791;margin-top:20px}
 @media(max-width:900px){.nav{align-items:flex-start;padding:14px 0;flex-direction:column;gap:10px}nav{justify-content:flex-start;gap:8px 15px}.areas,.case-grid,.insights{grid-template-columns:repeat(2,1fr)}.split,.contact-grid{grid-template-columns:1fr;gap:25px}.process{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.wrap{width:calc(100% - 30px)}nav{font-size:11px;gap:7px 12px}.hero-inner{min-height:520px;padding:65px 0}.hero p{font-size:15px}section{padding:60px 0}.areas,.case-grid,.insights,.credentials,.process{grid-template-columns:1fr}.contact-row{grid-template-columns:85px 1fr}.statement{padding:27px}}
+
+/* Attorney portrait: keep the original layout and typography */
+.hero-inner{gap:48px;justify-content:space-between}
+.hero-copy{flex:1;min-width:0}
+.hero-portrait{width:34%;max-width:355px;flex:0 0 34%;align-self:flex-end;margin-bottom:-85px;position:relative;z-index:1}
+.hero-portrait img{display:block;width:100%;height:auto;max-height:530px;object-fit:contain;object-position:center bottom}
+@media(max-width:900px){.hero-inner{gap:22px}.hero-portrait{width:34%;flex-basis:34%}.hero h1{font-size:clamp(30px,4.5vw,50px)}}
+@media(max-width:650px){.hero-inner{flex-direction:column;align-items:stretch;padding-bottom:0;gap:14px}.hero-copy{width:100%}.hero-portrait{align-self:center;width:min(76%,320px);max-width:320px;flex-basis:auto;margin-bottom:0}.hero-portrait img{max-height:390px}.hero h1{font-size:clamp(30px,8vw,42px)}}
 </style>
 </head>
 <body>
@@ -34,13 +42,13 @@ footer{background:#0a1928;color:#aebbc7;padding:24px 0;font-size:11px}.footer-in
  </div>
 </header>
 <main>
-<section class="hero" id="home"><div class="wrap hero-inner"><div>
+<section class="hero" id="home"><div class="wrap hero-inner"><div class="hero-copy">
  <div class="eyebrow">REAL ESTATE · CONSTRUCTION · DEBT RECOVERY</div>
  <h1>부동산·건설·채권 회수<br><em>분쟁의 핵심부터 실행까지</em></h1>
  <p>복잡한 법률문제일수록 사실관계와 증거를 정확히 살피는 일이 중요합니다. 부동산·건설 분쟁, 채권 회수와 강제집행을 중심으로 의뢰인의 상황에 맞는 현실적인 대응 방안을 검토합니다.</p>
  <div class="buttons"><a class="btn primary" href="#practice">주요 업무 분야</a><a class="btn" href="tel:0234732385">전화 상담 02-3473-2385</a></div>
  <p class="hero-note">법무법인 그린 · 류치환 변호사</p>
-</div></div></section>
+</div><div class="hero-portrait"><img src="attorney-portrait.jpg" alt="류치환 변호사 프로필 사진" width="720" height="1080" fetchpriority="high"></div></div></section>
 
 <section id="practice"><div class="wrap">
  <div class="section-head"><div class="kicker">Practice Areas</div><h2>주요 업무 분야</h2><p>사건의 성격과 목표를 파악하고, 소송 전 협의부터 재판·집행까지 필요한 절차와 대응 방향을 검토합니다.</p></div>
@@ -67,7 +75,7 @@ footer{background:#0a1928;color:#aebbc7;padding:24px 0;font-size:11px}.footer-in
    <div class="credential"><b>국방부 중앙전공사상심사위원회 위원</b>위원회 활동</div>
    <div class="credential"><b>공인중개사</b>관련 자격</div>
   </div>
-  <p class="small-note">※ 자격·위촉 명칭, 활동 기간 및 현재 유효 여부는 공개 전 최종 확인해 주세요. 실제 경력과 다른 표현은 수정하거나 삭제해야 합니다.</p>
+  
  </div>
 </div></section>
 
@@ -127,7 +135,7 @@ footer{background:#0a1928;color:#aebbc7;padding:24px 0;font-size:11px}.footer-in
 </div></section>
 </main>
 <footer><div class="wrap footer-inner"><span>© <span id="year"></span> 류치환 변호사. All rights reserved.</span><span>법무법인 그린 · 부동산 · 건설 · 채권 회수</span></div>
- <div class="wrap notice">본 홈페이지의 내용은 일반적인 법률정보 제공을 위한 것으로, 개별 사건에 대한 법률의견이나 결과를 보장하지 않습니다. 실제 상담 및 위임은 별도의 확인과 절차를 거쳐 진행됩니다. 홈페이지에 기재된 경력·자격·위촉 사항은 공개 전 사실관계와 표기 적정성을 확인해야 합니다.</div>
+ <div class="wrap notice">본 홈페이지의 내용은 일반적인 법률정보 제공을 위한 것으로, 개별 사건에 대한 법률의견이나 결과를 보장하지 않습니다. 실제 상담 및 위임은 별도의 확인과 절차를 거쳐 진행됩니다.</div>
 </footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body></html>
